@@ -1,0 +1,19 @@
+{
+  "name": "music-player-card",
+  "version": "1.0.0",
+  "description": "This is a simple project using Tailwind and Fontawesome",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/css/index.css -o ./src/css/output.css --watch"
+  },
+  "keywords": [
+    "music-player",
+    "ui",
+    "tailwind"
+  ],
+  "author": "jsmarenco",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "3.3.2"
+  }
+}

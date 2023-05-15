@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/css/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Music Player Card</title>
+    <style>
+      .align-center {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-400">
+    <div class="w-96 mx-auto p-6 rounded-lg bg-white">
+      <!-- Header -->
+      <div class="flex align-middle justify-between">
+        <div class="text-black hover:text-gray-600">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+
+        <p class="px-4 py-1 rounded-3xl bg-black text-white">Songs</p>
+
+        <div class="text-black hover:text-gray-600">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <!-- Cover -->
+      <div class="p-6 py-8">
+        <div class="p-1 border-cyan-900 rounded-full border-[5px]">
+          <img
+            class="rounded-full"
+            src="https://images.genius.com/1913c73f56256b46122e922a9e449ed4.640x640x1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Song name -->
+      <div class="flex align-center ml-4 justify-center my-3 mx-auto w-full">
+        <div class="mr-3 text-center">
+          <p class="text-base text-black font-bold">Blue</p>
+          <p class="text-sm text-black font-light">Derivakat</p>
+        </div>
+
+        <div
+          class="rounded-full bg-slate-500 w-7 h-7 flex align-center justify-center"
+        >
+          <div class="text-black hover:text-gray-600">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex align-middle justify-between w-72 mx-auto">
+        <div class="text-5xl mx-2 text-black hover:text-gray-600">
+          <i class="fa-solid fa-backward"></i>
+        </div>
+
+        <div
+          class="text-5xl mx-2 text-black hover:text-gray-600 cursor-pointer"
+          id="play-btn"
+        >
+          <i class="fa-solid fa-pause"></i>
+        </div>
+
+        <div class="text-5xl mx-2 text-black hover:text-gray-600">
+          <i class="fa-solid fa-forward"></i>
+        </div>
+      </div>
+
+      <!-- Volumen -->
+      <div class="flex align-center justify-center my-7 w-72 mx-auto">
+        <div class="text-sm m-1 text-black hover:text-gray-600">
+          <i class="fa-solid fa-volume-off"></i>
+        </div>
+
+        <div class="flex align-center justify-center h-3">
+          <div class="block h-1 w-28 bg-slate-900"></div>
+          <div
+            class="block w-3 h-3 bg-gray-300 hover:bg-slate-200 rounded-full"
+          ></div>
+          <div class="block h-1 w-28 bg-green-600"></div>
+        </div>
+
+        <div class="text-sm m-1 text-black hover:text-gray-600">
+          <i class="fa-sharp fa-solid fa-volume-high"></i>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="flex align-center justify-between w-64 mx-auto">
+        <div class="text-xl text-black hover:text-gray-600">
+          <i class="fa-solid fa-repeat"></i>
+        </div>
+
+        <div class="text-xl text-black hover:text-gray-600">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="text-xl text-black hover:text-gray-600">
+          <i class="fa-solid fa-shuffle"></i>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btn = document.getElementById("play-btn");
+
+      btn.addEventListener("click", () => {
+        const audio = new Audio('./src/assets/audio.mp3');
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
